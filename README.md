@@ -1,5 +1,4 @@
-# Server_Client_Interaction
-Assignment 1
+# Systems Biology Scientific Programming
 
 ---
 title: "Assignment 1:Server_Client_Interaction"
@@ -16,10 +15,4 @@ The code below demonstrates two color palettes in the [viridis](https://github.c
 
 ```{r}
 image(volcano, col = viridis(200))
-```
-
-## Magma colors
-
-```{r}
-image(volcano, col = viridis(200, option = "A"))
 ```
