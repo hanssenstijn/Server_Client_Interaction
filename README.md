@@ -23,22 +23,23 @@ Basic definitions
 
 ```{r}
 HTML basics (set-up)
-```
 
-<html>
-  <head>
-  </head>
-  <body>
-  Greetings Human!
-  </body>
-</html>
+<html>                                          - Opening tag
+<head>                                          - Info about page    </head>
+<body>                                          - Main content
+    This is my first web page!
+</body>
+</html>                                         - Closing tag
+
+```
+HTML is used for meaning
 
 ```{r}
 JavaScript basics (set-up)
 ```
 
 ```{r}
-Goal 1: use JavaScript+HTML for a REST service
+Goal 1: Use JavaScript+HTML for a REST service
 ```
 1A. Set up specific call
 
