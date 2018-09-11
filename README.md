@@ -25,14 +25,15 @@ Basic definitions
 HTML basics (set-up)
 
 <html>                                          - Opening tag
-<head>                                          - Info about page    </head>
+<head>                                          - Info about page
+</head>
 <body>                                          - Main content
     This is my first web page!
 </body>
 </html>                                         - Closing tag
 
 ```
-HTML is used for meaning
+
 
 ```{r}
 JavaScript basics (set-up)
