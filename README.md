@@ -36,11 +36,23 @@ HTML basics (set-up)
 
 
 ```{r}
-JavaScript basics (set-up)
+JavaScript basics
+// This is a comment.
+/* comment line 1
+Multi-line comment
+comment line 3*/
+var x = 10; // create variable, semi colon to end the statement
+alert(x) // print value as popup window
+console.log(x) // print to inspector
+var objectcurly = {}; // create an object
+// objects consist of properties (is) and methods (does)
+person.firstname; // dot(.) to retriev individual value
+
+
 ```
 
 ```{r}
-Goal 1: Use JavaScript+HTML for a REST service
+Goal 2: Use JavaScript+HTML for a REST service
 ```
 1A. Set up specific call
 
