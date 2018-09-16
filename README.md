@@ -53,16 +53,16 @@ var objectcurly = {}; // create an object
 
 // objects consist of properties (is) and methods (does)
 
-person.firstname; // dot(.) to retriev individual value
+person.firstname; // dot(.) to retrieve individual value
 
 ```{r}
 API key
-Step 1: Get API key
-Step 2: Add API key to application
 Example:
 <script async defer src="https://...?key=YOUR_API_KEY&callback=..."  type="text/javascript"></script>
-  
 ```
+Step 1: Get API key
+
+Step 2: Add API key to application
 
 ```{r}
 Goal 1: Use JavaScript+HTML for a REST service
