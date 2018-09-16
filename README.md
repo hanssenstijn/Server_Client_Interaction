@@ -31,7 +31,6 @@ HTML basics (set-up)
     This is my first web page!
 </body>
 </html>                                         - Closing tag
-
 ```
 
 
@@ -47,12 +46,19 @@ console.log(x) // print to inspector
 var objectcurly = {}; // create an object
 // objects consist of properties (is) and methods (does)
 person.firstname; // dot(.) to retriev individual value
-
-
 ```
 
 ```{r}
-Goal 2: Use JavaScript+HTML for a REST service
+API key
+Step 1: Get API key
+Step 2: Add API key to application
+Example:
+<script async defer src="https://...?key=YOUR_API_KEY&callback=..."  type="text/javascript"></script>
+  
+```
+
+```{r}
+Goal 1: Use JavaScript+HTML for a REST service
 ```
 1A. Set up specific call
 
@@ -65,5 +71,5 @@ Goal 2: Use JavaScript+HTML for a REST service
 2B. Dynamically insert this output in the HTML
 
 ```{r}
-Goal 1: Create HTML page that runs SparQL agianst wikidata SparQL end point
+Goal 2: Create HTML page that runs SparQL agianst wikidata SparQL end point
 ```
