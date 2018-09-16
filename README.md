@@ -31,8 +31,10 @@ output: html_document
 </html>                                         - Closing tag
 ```
 ## JavaScript basics
-// This is a comment.
+
 ```{r}
+// This is a comment.
+
 /* comment line 1
 Multi-line comment
 comment line 3*/
@@ -79,14 +81,14 @@ Example: var sources = new CompoundSearch("open PHACTS server", "API identifier"
 ```
 Platform connects data from pharmacological and phsiochemical sources. Data is integrated in a consolidated triple store. Can make use of linked data and workflows
 
+
+## OPS.js
 ```{r}
-OPS.js
 ```
 Javascript NodeJS based library, used for accessing Open PHACTS linked data API.
 
+## Goal 1: Use JavaScript+HTML for a REST service
 ```{r}
-Goal 1: Use JavaScript+HTML for a REST service
-```
 1A. Set up specific call
 
 1B. Make the call
@@ -96,7 +98,10 @@ Goal 1: Use JavaScript+HTML for a REST service
 2A. Convert returned answer to table/figure
 
 2B. Dynamically insert this output in the HTML
+```
 
+
+## Goal 2: Create HTML page that runs SparQL agianst wikidata SparQL end point
 ```{r}
-Goal 2: Create HTML page that runs SparQL agianst wikidata SparQL end point
+
 ```
