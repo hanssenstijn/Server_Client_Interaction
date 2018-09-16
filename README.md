@@ -5,9 +5,7 @@ title: "Assignment 1:Server_Client_Interaction"
 output: html_document
 ---
 
-```{r include = FALSE}
-Basic definitions
-```
+## Basic definitions
 
 1. **HTML**: *Hypertext Markup language* which is an annotating document. Used for creating webpages and web applications. HTML describes the structure of web pages scemahtically.
 
@@ -21,9 +19,9 @@ Basic definitions
 
 6. **Client-server** *servers provbide resource/service, clients are server requesters* servers implement API. 
 
-```{r}
-HTML basics (set-up)
 
+## HTML basics (set-up)
+```{r}
 <html>                                          - Opening tag
 <head>                                          - Info about page
 </head>
@@ -32,13 +30,9 @@ HTML basics (set-up)
 </body>
 </html>                                         - Closing tag
 ```
-
-
-```{r}
-JavaScript basics
-```
+## JavaScript basics
 // This is a comment.
-
+```{r}
 /* comment line 1
 Multi-line comment
 comment line 3*/
@@ -54,19 +48,18 @@ var objectcurly = {}; // create an object
 // objects consist of properties (is) and methods (does)
 
 person.firstname; // dot(.) to retrieve individual value
+```
 
+## API key
 ```{r}
-API key
 Example: <script async defer src="https://...?key=YOUR_API_KEY&callback=..."  type="text/javascript"></script>
-
 ```
 Step 1: Get API key
 
 Step 2: Add API key to application
 
+## HTTP response codes
 ```{r}
-HTTP response codes
-```
 * HTTP 200 OK - results are returned 
 
 * HTTP 403 if authorization failed 
@@ -76,13 +69,20 @@ HTTP response codes
 * HTTP 404 if nothing could be found 
 
 * HTTP 500 if internal server error occurred 
+```
 
+
+
+## OpenPHACTS
 ```{r}
-OpenPHACTS
-
 Example: var sources = new CompoundSearch("open PHACTS server", "API identifier", "API key");
 ```
-Platform connects data from pharmacological and phsiochemical sources. Data is integrated in a consolidated triple store. 
+Platform connects data from pharmacological and phsiochemical sources. Data is integrated in a consolidated triple store. Can make use of linked data and workflows
+
+```{r}
+OPS.js
+```
+Javascript NodeJS based library, used for accessing Open PHACTS linked data API.
 
 ```{r}
 Goal 1: Use JavaScript+HTML for a REST service
