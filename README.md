@@ -23,7 +23,7 @@ Basic definitions
 
 ```{r}
 HTML basics (set-up)
-```
+
 <html>                                          - Opening tag
 <head>                                          - Info about page
 </head>
@@ -31,6 +31,7 @@ HTML basics (set-up)
     This is my first web page!
 </body>
 </html>                                         - Closing tag
+```
 
 
 ```{r}
