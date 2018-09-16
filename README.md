@@ -13,7 +13,7 @@ Basic definitions
 
 2. **Javascript**: *High level interpreted programming language* enables interactive web pages (dynamic HTML).
 
-3. **API**: *Application Programming Interface* for building software. defined methods of communication between multiple components. describes how to use a library.
+3. **API**: *Application Programming Interface* for building software. Defined methods of communication between multiple components. Describes how to use a library.
 
 4. **SparQL**: *RDF language (Resource Description Framework)* its a semantic query language for databases. For retrieving manipulated data stored in RDF (info that is implemented in web resources).
 
@@ -36,6 +36,7 @@ HTML basics (set-up)
 
 ```{r}
 JavaScript basics
+```
 // This is a comment.
 /* comment line 1
 Multi-line comment
@@ -46,7 +47,6 @@ console.log(x) // print to inspector
 var objectcurly = {}; // create an object
 // objects consist of properties (is) and methods (does)
 person.firstname; // dot(.) to retriev individual value
-```
 
 ```{r}
 API key
