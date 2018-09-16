@@ -23,7 +23,7 @@ Basic definitions
 
 ```{r}
 HTML basics (set-up)
-
+```
 <html>                                          - Opening tag
 <head>                                          - Info about page
 </head>
@@ -31,7 +31,6 @@ HTML basics (set-up)
     This is my first web page!
 </body>
 </html>                                         - Closing tag
-```
 
 
 ```{r}
@@ -57,12 +56,32 @@ person.firstname; // dot(.) to retrieve individual value
 
 ```{r}
 API key
-Example:
-<script async defer src="https://...?key=YOUR_API_KEY&callback=..."  type="text/javascript"></script>
+Example: <script async defer src="https://...?key=YOUR_API_KEY&callback=..."  type="text/javascript"></script>
+
 ```
 Step 1: Get API key
 
 Step 2: Add API key to application
+
+```{r}
+HTTP response codes
+```
+* HTTP 200 OK - results are returned 
+
+* HTTP 403 if authorization failed 
+
+* HTTP 400 if request was invalid 
+
+* HTTP 404 if nothing could be found 
+
+* HTTP 500 if internal server error occurred 
+
+```{r}
+OpenPHACTS
+
+Example: var sources = new CompoundSearch("open PHACTS server", "API identifier", "API key");
+```
+Platform connects data from pharmacological and phsiochemical sources. Data is integrated in a consolidated triple store. 
 
 ```{r}
 Goal 1: Use JavaScript+HTML for a REST service
