@@ -29,7 +29,7 @@ var callback = function(success, status, response){
     d3.select("#json").html("No success: " + status);
   }
 };
-targetService.targetPharmacologyCount(
+sources.targetPharmacologyCount(
   "http://purl.uniprot.org/uniprot/O15151",
   null, null, null, null, null, null, null, null, null, null, null,
   null, null, null, null, null, null, callback
