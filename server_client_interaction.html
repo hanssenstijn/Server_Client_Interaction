@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Server client interaction</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <script type="text/javascript" src="https://egonw.github.io/pils/lib/purl.js"></script>
+  <script type="text/javascript" src="https://egonw.github.io/pils/lib/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="https://egonw.github.io/pils/lib/d3.v3.min.js"></script>
+  <script type="text/javascript" src="https://egonw.github.io/pils/src/combined.js"></script>
+
+</head>
+
+<body>
+  <h3>About paracetamol</h3>
+  <h4>JSON</h4>
+  <div class="json" id="json">Pending...</div>
+
+  <!-- dynamically create a table with type information -->
+  <script type="text/javascript">
+var sources = new CompoundSearch("https://beta.openphacts.org/2.2", "36e9b2ed", "9ab8bd4a1e8dff488ac3a469408de00d");
+var callback = function(success, status, response){
+  console.log(success)
+  console.log(status)
+  console.log(success || status == 200)
+  if (success && status == 200) {
+    d3.select("#json").html("<pre>" + JSON.stringify(response, undefined, 2) + "</pre>");
+  } else {
+    d3.select("#json").html("No success: " + status);
+  }
+};
+targetService.targetPharmacologyCount(
+  "http://purl.uniprot.org/uniprot/O15151",
+  null, null, null, null, null, null, null, null, null, null, null,
+  null, null, null, null, null, null, callback
+);
+  </script>
+</body>
+</html>
