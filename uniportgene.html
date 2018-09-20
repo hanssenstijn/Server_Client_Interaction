@@ -17,7 +17,8 @@
 </head>
 
 <body>
-  <h3>About Atrial Fibrillation</h3>
+  <h3>uniprot/O15151</h3>
+  <div id="uri"></div>
   <h4>Gene list</h4>
   <p>	<div id="list"></div></p>
   <h4>JSON</h4>
@@ -25,37 +26,36 @@
 
   <!-- dynamically create a table with type information -->
   <script type="text/javascript">
+var queryGene = 'http://identifiers.org/uniprot/O15151' 
+var node = document.createElement("li");
+var textnode = document.createTextNode(queryGene);
+        node.appendChild(textnode);
+        document.getElementById("uri").appendChild(node);
+
 var targetService = new TargetSearch(
-  "https://beta.openphacts.org/2.2", "91f5d4d0", "1af5086da757e57c553bfa1351708d5f"
+  "https://beta.openphacts.org/2.2", "36e9b2ed", "9ab8bd4a1e8dff488ac3a469408de00d"
 );
+
 var handleAssociations = function(success, status, jsonData) {
    d3.select("#json").html("<pre>" + JSON.stringify(jsonData, undefined, 2) + "</pre>");
    var itemCount = jsonData.items.length;
    for (var i = 0; i < itemCount; i++) {
       item = jsonData.items[i]
-      if (item.gene) {
+      if (item.hasMolecule) {
         var node = document.createElement("li");
-        var textnode = document.createTextNode(item.gene._about);
+        var textnode = document.createTextNode(item.hasMolecule._about);
         node.appendChild(textnode);
         document.getElementById("list").appendChild(node);
       }
    }
 };
-var handleCount = function(success, status, jsonData) {
-   d3.select("#json").html("<pre>" + JSON.stringify(jsonData, undefined, 2) + "</pre>");
-   console.log(jsonData)
-
-//  if (jsonData.primaryTopic.targetPharmacologyTotalResults) {
-	var node = document.createElement("li");
-	var textnode = document.createTextNode("Count "+ jsonData.primaryTopic.targetPharmacologyTotalResults);
-	node.appendChild(textnode);
-	document.getElementById("list").appendChild(node);
-//  }
-
-};
-targetService.targetPharmacologyCount(
-  'http://purl.uniprot.org/uniprot/O15151', null, null, null, null,null,null,null,null,null,null,null,null,null,null,null,null,null,
-  handleCount
+targetService.targetPharmacology(
+  queryGene, null,null,null,null,null,
+  null,null,null,null,
+  null,null,null,null,null,null,
+  null,null,null,
+  null,null,
+  handleAssociations
 );
   </script>
 </body>
