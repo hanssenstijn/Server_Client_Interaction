@@ -1,8 +1,7 @@
 # Systems Biology Scientific Programming
 
 ---
-title: "Assignment 1:Server_Client_Interaction"
-output: html_document
+Title: Assignment 1:Server_Client_Interaction
 ---
 
 ## Basic definitions
@@ -73,8 +72,6 @@ Step 2: Add API key to application
 * HTTP 500 if internal server error occurred 
 ```
 
-
-
 ## OpenPHACTS
 ```{r}
 Example: var sources = new CompoundSearch("open PHACTS server", "API identifier", "API key");
@@ -83,25 +80,15 @@ Platform connects data from pharmacological and phsiochemical sources. Data is i
 
 
 ## OPS.js
-```{r}
-```
+
 Javascript NodeJS based library, used for accessing Open PHACTS linked data API.
 
 ## Goal 1: Use JavaScript+HTML for a REST service
-```{r}
-1A. Set up specific call
+The main objective of this project is to retrieve information on drug targets of the gene MDM4.  MDM4 also known as HDMX is a p53 tumor suppressor protein that inhibits the activity. It has been found that this gene is overexpressed in multiple cancers. 
 
-1B. Make the call
+A Server client interaction will be made by using HTML and Javascript (uniprotgene.html). Queries will be sent toward the openPHACTS database to extract specific data. The response of openPHACTS will be plain text information about the gene MDM4, drug targets listed & some general information about the drug targets.
 
-1C. Record the returned answer
-
-2A. Convert returned answer to table/figure
-
-2B. Dynamically insert this output in the HTML
-```
 
 
 ## Goal 2: Create HTML page that runs SparQL agianst wikidata SparQL end point
-```{r}
 
-```

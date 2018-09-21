@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>About Atrial Fibrillation</title>
+  <title>About Drug interaction with MDM4 gene</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<!-- Copyright (c) 2017  Egon Willighagen <egon.willighagen@maastrichtuniversity.nl>
-     MIT license
--->
 
   <!-- ops.js -->
   <script type="text/javascript" src="https://egonw.github.io/pils/lib/purl.js"></script>
@@ -17,25 +13,26 @@
 </head>
 
 <body>
-  <h3>uniprot/O15151</h3>
+  <h3>uniprot gene</h3>
   <div id="uri"></div>
-  <h4>Gene list</h4>
+  <h4>Drug list</h4>
   <p>	<div id="list"></div></p>
-  <h4>JSON</h4>
+  <h4>JSON output</h4>
   <div id="json">Pending...</div>
 
-  <!-- dynamically create a table with type information -->
+	<!-- dynamically create a table with type information -->
   <script type="text/javascript">
+	<!-- Set the gene/protein -->
 var queryGene = 'http://identifiers.org/uniprot/O15151' 
 var node = document.createElement("li");
 var textnode = document.createTextNode(queryGene);
         node.appendChild(textnode);
         document.getElementById("uri").appendChild(node);
-
+	<!-- openPHACTS details -->
 var targetService = new TargetSearch(
   "https://beta.openphacts.org/2.2", "36e9b2ed", "9ab8bd4a1e8dff488ac3a469408de00d"
 );
-
+	<!--  Call back details -->
 var handleAssociations = function(success, status, jsonData) {
    d3.select("#json").html("<pre>" + JSON.stringify(jsonData, undefined, 2) + "</pre>");
    var itemCount = jsonData.items.length;
@@ -49,6 +46,7 @@ var handleAssociations = function(success, status, jsonData) {
       }
    }
 };
+	<!--  openPHACTS function -->
 targetService.targetPharmacology(
   queryGene, null,null,null,null,null,
   null,null,null,null,
