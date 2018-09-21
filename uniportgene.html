@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>About Drug interaction with MDM4 gene</title>
+  <title>Drug targets for MDM4 gene</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <!-- ops.js -->
+	<!-- load the needed packages -->
   <script type="text/javascript" src="https://egonw.github.io/pils/lib/purl.js"></script>
   <script type="text/javascript" src="https://egonw.github.io/pils/lib/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="https://egonw.github.io/pils/lib/d3.v3.min.js"></script>
@@ -13,27 +13,31 @@
 </head>
 
 <body>
-  <h3>uniprot gene</h3>
+	<!-- Tittles / placeholders for the webbrowser -->
+  <h3>uniprot-link MDM4</h3>
   <div id="uri"></div>
   <h4>Drug list</h4>
   <p>	<div id="list"></div></p>
-  <h4>JSON output</h4>
+  <h4> The JSON output</h4>
   <div id="json">Pending...</div>
 
 	<!-- dynamically create a table with type information -->
   <script type="text/javascript">
-	<!-- Set the gene/protein -->
-var queryGene = 'http://identifiers.org/uniprot/O15151' 
-var node = document.createElement("li");
-var textnode = document.createTextNode(queryGene);
-        node.appendChild(textnode);
-        document.getElementById("uri").appendChild(node);
-	<!-- openPHACTS details -->
+
+  <!-- Set the gene/protein -->
+var Gene = 'http://identifiers.org/uniprot/O15151' 
+var node = document.createElement("li"); 
+var textnode = document.createTextNode(Gene);
+node.appendChild(textnode);
+document.getElementById("uri").appendChild(node);
+	
+	<!-- openPHACTS access -->
 var targetService = new TargetSearch(
   "https://beta.openphacts.org/2.2", "36e9b2ed", "9ab8bd4a1e8dff488ac3a469408de00d"
 );
+	
 	<!--  Call back details -->
-var handleAssociations = function(success, status, jsonData) {
+var handleTargets = function(success, status, jsonData) {
    d3.select("#json").html("<pre>" + JSON.stringify(jsonData, undefined, 2) + "</pre>");
    var itemCount = jsonData.items.length;
    for (var i = 0; i < itemCount; i++) {
@@ -46,14 +50,14 @@ var handleAssociations = function(success, status, jsonData) {
       }
    }
 };
-	<!--  openPHACTS function -->
+	<!--  openPHACTS function targetPharmacology -->
 targetService.targetPharmacology(
-  queryGene, null,null,null,null,null,
+  Gene, null,null,null,null,null,
   null,null,null,null,
   null,null,null,null,null,null,
   null,null,null,
   null,null,
-  handleAssociations
+  handleTargets
 );
   </script>
 </body>
